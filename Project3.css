@@ -1,0 +1,104 @@
+.project3-1{
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.project3-2{
+    padding: 30px;
+    background-color: bisque;
+}
+.project3-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project3-3{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.project3-5{
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Project3-5{
+    padding: 80px;
+    background-color: rgb(239, 239, 239);
+}
+.project3-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Project3-6{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    border-left: 5px solid rgb(255, 153, 0);
+}
+.project3-2-3{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project3-2-2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.project3-2-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.project3-2-5{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.project3-2-2{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.project3-2-4{
+    padding: 30px;
+}
+.project3-2-6{
+    background-color: bisque;
+}
+.project3-2-7{
+    border-left: 1px solid rgba(0, 0, 0, 0.121);
+}
+.project3-2-6-1{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.121);
+    background-color: white;
+}
+.project3-2-3-1{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+@media screen and (max-width: 900px) {
+    .project3-4{
+        margin-top: 80px;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .Project3-5{
+        padding: 10px;
+        background-color: rgb(239, 239, 239);
+    }
+    .project3-2{
+        padding-top: 20px;
+        padding-right: 5px;
+        padding-bottom: 20px;
+        padding-left: 5px;
+        background-color: bisque;
+    }
+    
+}

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GLOBAL CLOCK</title>
+    <link rel="stylesheet" href="./Project3.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script>
+      let a;
+      let date;
+      let time;
+      setInterval(() => {
+        a = new Date();
+        time = a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        date = a.toLocaleDateString();
+        document.getElementById("time").innerHTML =
+          " " + time + "<br> on " + date;
+      }, 1000);
+    </script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>Your Planner</b></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Clients</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Freelancing Platforms
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Another action</a></li>
+                <li>
+                  <hr class="dropdown-divider" />
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled"></a>
+            </li>
+          </ul>
+          <form class="d-flex" role="search">
+            <input
+              class="form-control me-2"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+            <button class="btn btn-outline-success" type="submit">
+              Search
+            </button>
+          </form>
+        </div>
+      </div>
+    </nav>
+    <div class="project3-2">
+      <div class="container project3-2">
+        <div class="row project3-2">
+          <div class="col-lg-6 col-12 project3-3 row">
+            <h1 class="col-12">Current Time is: <span id="time"></span></h1>
+            <p class="project3-1 col-12">
+              Are you freelancer and rushing for a meeting with foreign client
+              but can't synchronise with their time zone? You have landed to the
+              perfect web page. There you go click on the browse button to
+              browse different time zones.
+            </p>
+            <p>
+            <button
+              class="btn btn-primary col-4"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapseWidthExample"
+              aria-expanded="false"
+              aria-controls="collapseWidthExample"
+            >
+              Browse
+            </button>
+            </p>
+            <div class="project3-5">
+              <div
+                class="collapse collapse-horizontal"
+                id="collapseWidthExample"
+              >
+                <div class="card card-body" style="width: 300px">
+                  <ul class="list-group">
+                    <button><li class="list-group-item">Asia</li></button>
+                    <button><li class="list-group-item">Africa</li></button>
+                    <button>
+                      <li class="list-group-item">North America</li>
+                    </button>
+                    <button>
+                      <li class="list-group-item">South America</li>
+                    </button>
+                    <button><li class="list-group-item">Russia</li></button>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 col-12 row project3-4">
+            <img src="./img.png" alt="image" class="col-12" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Project3-5">
+      <div id="todo" class="container">
+        <div class="project3-2-2 row">
+          <div class="col-12 project3-2-3 row">
+            <h2 class="col-lg-2 col-md-6 col-6 Project3-6">Planner</h2>
+          </div>
+          <div class="col-lg-6 col-md-10 col-12 project3-2-4 row">
+            <div class="col-12 project3-2-5">
+              <label for="task" class="form-label">Meeting Agenda</label>
+              <input
+                type="text"
+                class="form-control"
+                id="task"
+                aria-describedby="emailHelp"
+              />
+            </div>
+            <div class="input-group project3-2-5">
+              <span class="input-group-text">Description</span>
+              <textarea
+                class="form-control"
+                id="description"
+                aria-label="Description"
+              ></textarea>
+            </div>
+            <div class="col-12 row project3-2-5">
+              <label for="Current date" class="form-label">Date</label>
+              <input
+                type="date"
+                id="current date"
+                name="Current Date"
+                class="form-control"
+              />
+            </div>
+            <button type="submit" id="add" class="btn btn-primary col-6">
+              Add To List
+            </button>
+          </div>
+          <div id="items" class="project3-2-2 row">
+            <div class="col-12 project3-2-3 row">
+              <table class="table project3-2-3-1">
+                <thead class="project3-2-6">
+                  <tr>
+                    <th scope="col" class="project3-2-7">Serial Number</th>
+                    <th scope="col" class="project3-2-7">Task</th>
+                    <th scope="col" class="project3-2-7">Description</th>
+                    <th scope="col" class="project3-2-7">Date</th>
+                    <th scope="col" class="project3-2-7">Mark as done</th>
+                    <th scope="col" class="project3-2-7">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="table" class="project3-2-6-1">
+                  <tr>
+                    <th scope="row" class="project3-2-7">1</th>
+                    <td class="project3-2-7">Check Linkedin</td>
+                    <td class="project3-2-7">Keep yourself updated with new job feeds</td>
+                    <td class="project3-2-7">02-02-23</td>
+                    <td class="project3-2-7"><input type="checkbox" name="done" /> Done &nbsp;</td>
+                    <td class="project3-2-7">
+                      <button type="submit" class="btn btn-primary">
+                        Delete
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function getupdate() {
+        console.log("updating");
+        let tit = document.getElementById("task").value;
+        let desc = document.getElementById("description").value;
+        let day = document.getElementById("current date").value;
+        if (localStorage.getItem("itemsJson") == null) {
+          itemJsonArray = [];
+          itemJsonArray.push([tit, desc, day]);
+          localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+        } else {
+          itemJsonArraystr = localStorage.getItem("itemsJson");
+          itemJsonArray = JSON.parse(itemJsonArraystr);
+          itemJsonArray.push([tit, desc, day]);
+          localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+        }
+        update();
+      }
+      function update() {
+        if (localStorage.getItem("itemsJson") == null) {
+          
+          itemJsonArray = [];
+          localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+        } else {
+          
+          itemJsonArraystr = localStorage.getItem("itemsJson");
+          itemJsonArray = JSON.parse(itemJsonArraystr);
+          console.log(itemJsonArray.length,"roshan");
+        }
+        let table = document.getElementById("table");
+        let str = "";
+        if(itemJsonArray.length==0){
+          str += `
+                  <tr>
+                    <th scope="row">No Data</th>
+                    <td>No Data</td>
+                    <td>No Data</td>
+                    <td>No Data</td>
+                  </tr>`;
+        }
+        itemJsonArray.forEach((element, index) => {
+          str += `
+                  <tr>
+                    <th scope="row">${index + 1}</th>
+                    <td>${element[0]}</td>
+                    <td>${element[1]}</td>
+                    <td>${element[2]}</td>
+                    <td><input type="checkbox" name="done" /> Done &nbsp; </td>
+                    <td> <button type="submit" class="btn btn-primary" onclick="deleted(${index})">Delete</button></td>
+                  </tr>`;
+        });
+        table.innerHTML = str;
+      }
+      add = document.getElementById("add");
+      add.addEventListener("click", getupdate);
+      update();
+
+      function deleted(itemIndex) {
+        console.log("Delete", itemIndex);
+        itemJsonArraystr = localStorage.getItem("itemsJson");
+        itemJsonArray = JSON.parse(itemJsonArraystr);
+        itemJsonArray.splice(itemIndex, 1);
+        localStorage.setItem("itemsJson", JSON.stringify(itemJsonArray));
+        update();
+      }
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
